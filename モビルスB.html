@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <td><button id="btn" class="div1" onclick="changePage(event)">スピーカー１</button></td>
+            <td><button id="btn" class="div2" onclick="changePage(event)">スピーカー２</button></td>
+        </tr>
+
+    </table>
+
+    <div class="session" id="div1">
+        <h1>スピーカー１</h1>
+        <p class="stTime">開始時間：17:11</p>
+        <p class="endTime">終了時間：18:00</p>
+    </div>
+
+    <div class="session" id="div2">
+        <h1>スピーカー２</h1>
+        <p class="stTime">開始時間：18:00</p>
+        <p class="endTime">終了時間：18:10</p>
+    </div>
+
+
+    <style>
+        div {
+            display: none;
+        }
+        
+        body {
+            text-align: center;
+        }
+        
+        table {
+            margin: auto;
+            margin-top: 130px;
+        }
+    </style>
+
+
+</body>
+<script type="text/javascript" src="モビルスB.js"></script>
+
+</html>
