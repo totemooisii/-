@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<div>
+    <!-- ボタン設定 -->
+    <input type="radio" name="catagry" id="all" value="全て表示" checked="true">
+    <input type="radio" name="catagry" id="a" value="A">
+    <input type="radio" name="catagry" id="b" value="B">
+    <input type="radio" name="catagry" id="c" value="C">
+    <input type="radio" name="catagry" id="d" value="D">
+    <input type="radio" name="catagry" id="e" value="E">
+    <input type="radio" name="catagry" id="f" value="F">
+
+    <!-- 表示させるボタン -->
+
+    <label for="all">全て表示</label>
+    <table>
+        <tr>
+            <td><label for="a">A</label></td>
+            <td><label for="b">B</label></td>
+            <td><label for="c">C</label></td>
+        </tr>
+        <tr>
+            <td><label for="d">D</label></td>
+            <td><label for="e">E</label></td>
+            <td><label for="f">F</label></td>
+        </tr>
+    </table>
+
+
+
+    <!-- 表示コンテンツ -->
+    <div class="targets">
+        <table>
+            <tr>
+                <td>
+                    <div class="target" data-category="a all">A</div>
+                </td>
+                <td>
+                    <div class="target" data-category="b all">B</div>
+                </td>
+                <td>
+                    <div class="target" data-category="c all">C</div>
+            </tr>
+            <tr>
+                <td>
+                    <div class="target" data-category="d all">D</div>
+                </td>
+                <td>
+                    <div class="target" data-category="e all">E</div>
+                </td>
+                <td>
+                    <div class="target" data-category="f all">F</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    </body>
+    <style>
+        [value="全て表示"]:checked~.targets .target:not([data-category~="all"]),
+        [value="A"]:checked~.targets .target:not([data-category~="a"]),
+        [value="B"]:checked~.targets .target:not([data-category~="b"]),
+        [value="C"]:checked~.targets .target:not([data-category~="c"]),
+        [value="D"]:checked~.targets .target:not([data-category~="d"]),
+        [value="E"]:checked~.targets .target:not([data-category~="e"]),
+        [value="F"]:checked~.targets .target:not([data-category~="f"]) {
+            display: none;
+        }
+        
+        [value="全て表示"]:checked~.btn_style [for="all"],
+        [value="A"]:checked~.btn_style [for="a"],
+        [value="B"]:checked~.btn_style [for="b"],
+        [value="C"]:checked~.btn_style [for="c"],
+        [value="D"]:checked~.btn_style [for="d"],
+        [value="E"]:checked~.btn_style [for="e"],
+        [value="F"]:checked~.btn_style [for="f"] {
+            background: #48597d;
+            color: #fff;
+        }
+        
+        [value="全て表示"]:checked~.targets [data-category] {
+            display: block;
+        }
+        
+        input {
+            display: none;
+        }
+        
+        label {
+            display: block;
+            width: 24%;
+            text-align: center;
+            font-size: 0.9rem;
+            padding: 10px 0px;
+            margin-bottom: 15px;
+            -webkit-border-radius: 2rem;
+            -moz-border-radius: 2.0rem;
+            border-radius: 2rem;
+            background: #ccc;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        label {
+            text-align: center;
+            margin: auto;
+            margin-bottom: 10px;
+            width: 100px;
+        }
+        
+        table {
+            margin: auto;
+        }
+        
+        .target {
+            border: solid;
+            text-align: center;
+            font-size: 40px;
+            width: 200px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+</html>
