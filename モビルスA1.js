@@ -10,26 +10,25 @@ st3 = 1608
 
 //表示させるセッションの判定
 function changeInfo() {
-    if (st1 <= nowTime && nowTime < st2) {
+//     if (st1 <= nowTime && nowTime < st2) {
+//         div1 = document.getElementById("div1")
+//         div1.style.display = "block";
+//     } else if (st2 <= nowTime && nowTime < st3) {
+//         div1.style.display = "none";
+//         div2 = document.getElementById("div2")
+//         div2.style.display = "block";
+//     }
+//     console.log(nowTime);
+    if (nowTime % 2 == 0) {
+        div2.style.display = "none";
         div1 = document.getElementById("div1")
         div1.style.display = "block";
-    } else if (st2 <= nowTime && nowTime < st3) {
+    } else {
         div1.style.display = "none";
         div2 = document.getElementById("div2")
         div2.style.display = "block";
     }
-    console.log(nowTime);
-    // count = count + 1;
-    // if (count % 2 == 0) {
-    //     div2.style.display = "none";
-    //     div1 = document.getElementById("div1")
-    //     div1.style.display = "block";
-    // } else {
-    //     div1.style.display = "none";
-    //     div2 = document.getElementById("div2")
-    //     div2.style.display = "block";
-    // }
-    // console.log(count);
+    console.log(count);
 }
 
 //１秒ごとに関数実行
